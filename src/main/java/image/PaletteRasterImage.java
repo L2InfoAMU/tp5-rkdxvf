@@ -63,6 +63,7 @@ public class PaletteRasterImage implements Image {
             }
 
         }
+    }
     private void setPixelsColor(Color color) {
 
 
