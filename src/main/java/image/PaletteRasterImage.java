@@ -1,37 +1,50 @@
 package image;
 
 import javafx.scene.paint.Color;
+import util.Matrices;
 
 import java.util.List;
 
 public class PaletteRasterImage implements Image {
+
+
     int width;
     int height;
     int [][] indexOfColors;
     List<Color> palette;
 
+
     public PaletteRasterImage(Color color, int width, int height) {
-        for (int i=0;i<width;i++){
-            for(int j=0;j<height;j++){
-               setPixelColor(color,width,height);
-            }
-        }
+
+       setWidth(width);
+       setHeight(height);
+       createRepresentation();
+       setPixelColor(color,width,height);
+
     }
 
     public PaletteRasterImage(Color[][] pixels) {
-        for (int i=0;i<width;i++){
-            for(int j=0;j<height;j++){
-              // Color [i][j] = pixels[i][j];
-            }
-        }
+        Matrices.requiresNonNull(pixels);
+        Matrices.requiresNonZeroDimensions(pixels);
+        Matrices.requiresRectangularMatrix(pixels);
+
+        setWidth(pixels.length);
+        setHeight(pixels[0].length);
+        createRepresentation();
+        setPixelColor(pixels);
     }
+
 
     public void createRepresentation() {
 
     }
 
     public void setPixelColor(Color color, int x, int y) {
-
+            for (int x=0;x<width;x++){
+                for (int y=0;y<height;y++){
+                    setPixelColor(pixels[x][y]),x,y);
+                }
+            }
     }
 
     @Override
