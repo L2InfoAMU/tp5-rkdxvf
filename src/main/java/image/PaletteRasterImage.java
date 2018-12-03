@@ -38,12 +38,15 @@ public class PaletteRasterImage implements Image {
 
     public void createRepresentation() {
         this.palette = new ArrayList<>();
-       this.indexOfColors = new int
+       this.indexOfColors = new int[getHeight()][getWidth()];
 
     }
 
     public void setPixelColor(Color color, int x, int y) {
-
+            if(palette.contains(color)){
+                palette.add(color);
+            }
+            indexOfColors[x][y] = palette.indexOf((color));
     }
 
     @Override
