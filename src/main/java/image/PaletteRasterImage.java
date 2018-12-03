@@ -11,12 +11,19 @@ public class PaletteRasterImage implements Image {
     List<Color> palette;
 
     public PaletteRasterImage(Color color, int width, int height) {
-
+        for (int i=0;i<width;i++){
+            for(int j=0;j<height;j++){
+               setPixelColor(color,width,height);
+            }
+        }
     }
 
     public PaletteRasterImage(Color[][] pixels) {
-
-
+        for (int i=0;i<width;i++){
+            for(int j=0;j<height;j++){
+              // Color [i][j] = pixels[i][j];
+            }
+        }
     }
 
     public void createRepresentation() {
@@ -42,12 +49,12 @@ public class PaletteRasterImage implements Image {
 
     @Override
     public int getWidth() {
-        return 0;
+        return this.width;
     }
 
     @Override
     public int getHeight() {
-        return 0;
+        return this.height;
     }
 
     protected void setWidth(int width) {
