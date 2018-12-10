@@ -7,7 +7,7 @@ import java.util.Map;
 
 public  class SparseRasterImage extends RasterImage {
     public  Color color;
-    Map<Point,Color> pixelMap;
+   private Map<Point,Color> pixelMap;
 
     public SparseRasterImage(Color color, int width, int height){ super(color,width,height); }
 
@@ -16,8 +16,6 @@ public  class SparseRasterImage extends RasterImage {
     }
 
     // METHODES
-
-
     public void createRepresentation() {
         pixelMap = new HashMap<>();
     }
@@ -25,15 +23,10 @@ public  class SparseRasterImage extends RasterImage {
 
     public void setPixelColor(Color color, int x, int y) {
         pixelMap.put(new Point(x,y),color);
-
     }
 
 
     public Color getPixelColor(int x, int y) {
-
         return pixelMap.getOrDefault(new Point(x,y),Color.WHITE);
     }
-
-
-
 }

@@ -8,18 +8,15 @@ import java.util.List;
 
 public class PaletteRasterImage extends RasterImage {
 
-
     int[][] indexOfColors;
     List<Color> palette;
 
 
     public PaletteRasterImage(Color color, int width, int height) {
-
         super(color, width, height);
-
     }
 
-    public PaletteRasterImage(Color[][] pixels) {
+    public PaletteRasterImage(Color[][] pixels){
         super(pixels);
     }
 
@@ -35,7 +32,7 @@ public class PaletteRasterImage extends RasterImage {
         this.indexOfColors[x][y] = palette.indexOf(color);
     }
 
-    @Override
+
     public Color getPixelColor(int x, int y) {
         return palette.get(indexOfColors[x][y]);
     }

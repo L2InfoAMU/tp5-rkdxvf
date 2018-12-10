@@ -13,12 +13,10 @@ public class BruteRasterImage extends RasterImage {
 
     // COINSTRUCTEURS
     public BruteRasterImage(Color color, int width, int height) {
-
         super(color,width,height);
     }
 
     public BruteRasterImage(Color[][] colors){
-
         super(colors);
     }
 
@@ -36,8 +34,4 @@ public class BruteRasterImage extends RasterImage {
     public Color getPixelColor(int x, int y) {
         return colors[x][y];
     }
-
-
-
-
 }

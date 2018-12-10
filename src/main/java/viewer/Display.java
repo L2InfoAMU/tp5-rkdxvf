@@ -27,17 +27,14 @@ public class Display implements Initializable {
        //imageFactory = new RasterFlagFactory(100, 100,Color.BLUE, Color.WHITE, Color.RED, RasterImageType.SPARE);
         imageFactory = new LogoLISFactory();
         this.image = imageFactory.makeImage();
-
         render();
     }
 
     private void render() {
         int pixelWidth = image.getWidth();
         int pixelHeight = image.getHeight();
-
         canvas.setWidth(pixelWidth);
         canvas.setHeight(pixelHeight);
-
         GraphicsContext graphicsContext = canvas.getGraphicsContext2D();
         PixelWriter pixelWriter = graphicsContext.getPixelWriter();
 
@@ -51,7 +48,4 @@ public class Display implements Initializable {
     private void renderPixel(int x, int y, PixelWriter pixelWriter) {
         pixelWriter.setColor(x, y, image.getPixelColor(x, y));
     }
-
-
-
 }

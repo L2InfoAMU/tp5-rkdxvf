@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Rectangle implements Shape{
     Color color;
-    int x,y,width,height;
+   private int x,y,width,height;
 
     public Rectangle(int x, int y, int width, int height, Color color){
         this.x=x;

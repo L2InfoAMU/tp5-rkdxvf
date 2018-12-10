@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 import java.util.List;
 
 public class VectorImage implements Image{
-  private List<Shape> shapes;
+    private List<Shape> shapes;
     private  int width;
     private int height ;
 
