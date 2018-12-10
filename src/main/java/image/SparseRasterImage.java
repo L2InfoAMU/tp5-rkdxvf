@@ -9,11 +9,7 @@ public  class SparseRasterImage extends RasterImage {
     public  Color color;
     Map<Point,Color> pixelMap;
 
-    public SparseRasterImage(Color color, int width, int height){
-
-        super(color,width,height);
-
-    }
+    public SparseRasterImage(Color color, int width, int height){ super(color,width,height); }
 
     public SparseRasterImage(Color[][] pixels){
         super(pixels);
