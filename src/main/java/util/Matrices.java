@@ -60,7 +60,7 @@ public class Matrices {
      * @param matrix the matrix.
      * @return the number of rows of the matrix.
      */
-    public static int getRowCount(Object[][] matrix){
+    private static int getRowCount(Object[][] matrix){
         return matrix.length;
     }
 
@@ -70,7 +70,7 @@ public class Matrices {
      * @param matrix the matrix.
      * @return the number of rows of the matrix.
      */
-    public static int getColumnCount(Object[][] matrix){
+    private static int getColumnCount(Object[][] matrix){
         return matrix[0].length;
     }
 

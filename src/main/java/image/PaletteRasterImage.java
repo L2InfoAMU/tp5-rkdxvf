@@ -8,8 +8,8 @@ import java.util.List;
 
 public class PaletteRasterImage extends RasterImage {
 
-    int[][] indexOfColors;
-    List<Color> palette;
+    private int[][] indexOfColors;
+    private List<Color> palette;
 
 
     public PaletteRasterImage(Color color, int width, int height) {

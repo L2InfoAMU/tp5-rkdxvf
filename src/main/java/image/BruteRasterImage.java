@@ -7,7 +7,7 @@ import image.Image;
 public class BruteRasterImage extends RasterImage {
 
     // VARIABLES
-    Color[][] colors;
+   private Color[][] colors;
     Color color;
 
 

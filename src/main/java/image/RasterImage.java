@@ -32,7 +32,7 @@ public abstract class RasterImage implements Image {
 
     public abstract Color getPixelColor(int x, int y);
 
-    public void setPixelsColor(Color[][] pixels) {
+    private void setPixelsColor(Color[][] pixels) {
         for (int i = 0; i <= this.width; i++) {
             for (int j = 0; j <= this.height; j++) {
                 setPixelColor(pixels[i][j], i, j);
@@ -40,7 +40,7 @@ public abstract class RasterImage implements Image {
         }
     }
 
-    public void setPixelsColor(Color color) {
+    private void setPixelsColor(Color color) {
         for (int i = 0; i <= this.width; i++) {
             for (int j = 0; j <= this.height; j++) {
                 setPixelColor(color, i, j);
@@ -58,11 +58,11 @@ public abstract class RasterImage implements Image {
         return this.height;
     }
 
-    public void setWidth(int width) {
+    private void setWidth(int width) {
         this.width = width;
     }
 
-    public void setHeight(int height) {
+    private void setHeight(int height) {
         this.height = height;
     }
 
