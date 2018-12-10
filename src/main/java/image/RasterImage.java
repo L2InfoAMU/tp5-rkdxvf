@@ -24,6 +24,7 @@ public abstract class RasterImage implements Image {
         createRepresentation();
         setPixelsColor(pixels);
     }
+    // METHODES
 
     public abstract void createRepresentation();
 

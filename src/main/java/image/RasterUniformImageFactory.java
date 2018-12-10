@@ -17,7 +17,8 @@ public class RasterUniformImageFactory implements ImageFactory {
     @Override
     public Image makeImage() {
         switch (rasterImageType){
-            case PALETTE:
+            case SPARE:
+            //  case PALETTE:
             //  case BRUTE:
                 return new BruteRasterImage(color,width,height);
             default:

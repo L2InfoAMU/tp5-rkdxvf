@@ -30,7 +30,8 @@ public class RasterFlagFactory implements ImageFactory {
             }
         }
         switch (rasterImageType){
-            case PALETTE:
+            case SPARE:
+            //case PALETTE:
             // case BRUTE:
                 return new BruteRasterImage(colors);
             default:
