@@ -2,10 +2,13 @@ package image;
 
 import javafx.scene.paint.Color;
 
+import java.util.HashMap;
 import java.util.Map;
+
 
 public  class SparseRasterImage extends RasterImage {
     public  Color color;
+    Map<Point,Color> pixelMap;
 
     public SparseRasterImage(Color color, int width, int height){
         super(color,width,height);
@@ -15,11 +18,11 @@ public  class SparseRasterImage extends RasterImage {
         super(pixels);
     }
 
-    // METHODES
+    // METHODES //
 
 
     public void createRepresentation() {
-       //
+       pixelMap = new HashMap<>();
     }
 
 
